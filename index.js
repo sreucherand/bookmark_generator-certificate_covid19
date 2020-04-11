@@ -22,7 +22,13 @@ import beneficiaries from "./beneficiaries.json"
     )
     .join("")
 
-  const injectionTemplate = `<div style="background-color:#ffffff;border-bottom:1px solid #ced4da;left:0;margin:-20px;margin-bottom:20px;padding:24px;position:sticky;right:0;text-align:center;top:0;z-index:99999;"><style scoped>@media (min-width:576px){.btn-sm-inline{width:auto;}}</style><form class="form-inline justify-content-center" id="___prefill_form" style="margin: 0;max-width:none;"><select class="form-control mr-sm-3 mb-3 mb-sm-0"><option value="">Sélectionnez la personne concernée</option>${options}</select> <button class="btn btn-primary btn-block btn-sm-inline" disabled="disabled" type="submit">Remplir</button></form></div>`
+  const injectionTemplate = `<div id="___bm-cc19" style="background-color:#ffffff;border-bottom:1px solid #ced4da;left:0;margin:-20px;margin-bottom:20px;padding:24px;position:sticky;right:0;text-align:center;top:0;z-index:99999;"><style scoped>@media (min-width:576px){.btn-sm-inline{width:auto;}}</style><form class="form-inline justify-content-center" id="___prefill_form" style="margin: 0;max-width:none;"><select class="form-control mr-sm-3 mb-3 mb-sm-0"><option value="">Sélectionnez la personne concernée</option>${options}</select> <button class="btn btn-primary btn-block btn-sm-inline" disabled="disabled" type="submit">Remplir</button></form></div>`
+
+  const existingContainer = document.getElementById("___bm-cc19")
+
+  if (existingContainer) {
+    existingContainer.parentNode.removeChild(existingContainer)
+  }
 
   document.body.firstElementChild.insertAdjacentHTML(
     "beforebegin",
