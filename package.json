@@ -1,0 +1,27 @@
+{
+  "name": "bookmark_generator-certificate_covid19",
+  "version": "1.0.0",
+  "description": "Remplissage de l'attestation de déplacement dérogatoire mis en place par le gouvernement contre le COVID-19 automatisé en 2 clics.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sreucherand/bookmark_generator-certificate_covid19.git"
+  },
+  "author": "Sylvain Reucherand <hello@sylvainreucherand.fr> (https://sylvainreucherand.fr/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sreucherand/bookmark_generator-certificate_covid19/issues"
+  },
+  "homepage": "https://github.com/sreucherand/bookmark_generator-certificate_covid19#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-plugin-inline-json-import": "^0.3.2",
+    "babel-preset-minify": "^0.5.1",
+    "prettier": "^2.0.4"
+  },
+  "scripts": {
+    "copy": "echo \"$(echo 'javascript:(function(){' && babel index.js && echo '})();')\" | perl -pe 'chomp' | iconv -f ISO-8859-1 -t UTF-8 | pbcopy"
+  }
+}

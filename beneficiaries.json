@@ -1,0 +1,20 @@
+[
+  {
+    "address": "11bis, rue Victor-Schœlcher",
+    "birthday": "09/01/1908",
+    "firstname": "Simone",
+    "lastname": "de Beauvoir",
+    "lieunaissance": "Paris (75)",
+    "town": "Paris",
+    "zipcode": "75014"
+  },
+  {
+    "address": "29, boulevard Edgard-Quinet",
+    "birthday": "21/06/1905",
+    "firstname": "Jean-Paul",
+    "lastname": "Sartre",
+    "lieunaissance": "Paris (75)",
+    "town": "Paris",
+    "zipcode": "75014"
+  }
+]
